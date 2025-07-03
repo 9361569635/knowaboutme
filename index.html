@@ -78,15 +78,9 @@
     }
 
     .highlight-name {
-       color: #007BFF; 
-       font-weight: bold;
-   }
-
-    .highlight-name {
-       background: linear-gradient(to right, #ff416c, #ff4b2b);
-      -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-   }
+      transition: color 0.5s ease-in-out;
+      font-weight: bold;
+  }
 
     section {
       background: white;
@@ -758,6 +752,16 @@
 </footer>
 
 <script>
+    const colors = ["#e91e63", "#007bff", "#4caf50", "#ff9800", "#9c27b0"];
+    let i = 0;
+
+  setInterval(() => {
+    const nameSpans = document.querySelectorAll(".highlight-name");
+    nameSpans.forEach(span => {
+      span.style.color = colors[i];
+    });
+    i = (i + 1) % colors.length;
+  }, 1000);
   // Reveal on scroll
   function reveal() {
     const reveals = document.querySelectorAll(".reveal");
