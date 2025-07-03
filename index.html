@@ -77,6 +77,17 @@
       padding: 20px;
     }
 
+    .highlight-name {
+       color: #007BFF; 
+       font-weight: bold;
+   }
+
+    .highlight-name {
+       background: linear-gradient(to right, #ff416c, #ff4b2b);
+      -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+   }
+
     section {
       background: white;
       margin-bottom: 30px;
@@ -486,20 +497,22 @@
 </header>
 
 <main>
-  <section id="home" class="reveal">
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
-      <div style="flex: 1; min-width: 250px;">
-        <h2>Hello, I'm Raghul T M</h2>
-        <p>I'm <strong>Raghul T M</strong> , an aspiring full-stack web developer with a passion for creating clean, efficient, and user-friendly digital experiences. I enjoy turning complex problems into simple, elegant solutions using modern web technologies.
-
-I'm currently pursuing <strong>B.TECH(INFORMATION TECHNOLOGY)</strong>and have hands-on experience through internships and personal projects. My interests include frontend design, backend development, and continuously learning new tools in the tech ecosystem.A <strong>Web Developer & Data Analyst</strong> passionate about building interactive web apps and extracting insights from data.</p>
-       
-      </div>
-      <div style="flex-shrink: 0;">
-        <img src="raghul.jpg.png" alt="Raghul's Photo" class="profile" />
-      </div>
+ <section id="home" class="reveal">
+  <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+    <div style="flex: 1; min-width: 250px;">
+      <h2>Hello, I'm <span class="highlight-name">Raghul T M</span></h2>
+      <p>
+        I'm <strong><span class="highlight-name">Raghul T M</span></strong>, an aspiring full-stack web developer with a passion for creating clean, efficient, and user-friendly digital experiences. I enjoy turning complex problems into simple, elegant solutions using modern web technologies.
+        <br><br>
+        I'm currently pursuing <strong>B.TECH(INFORMATION TECHNOLOGY)</strong> and have hands-on experience through internships and personal projects. My interests include frontend design, backend development, and continuously learning new tools in the tech ecosystem. A <strong>Web Developer & Data Analyst</strong> passionate about building interactive web apps and extracting insights from data.
+      </p>
     </div>
-  </section>
+    <div style="flex-shrink: 0;">
+      <img src="raghul.jpg.png" alt="Raghul's Photo" class="profile" />
+    </div>
+  </div>
+</section>
+
 
   <section id="skills" class="reveal">
     <h2>Skills</h2>
