@@ -891,8 +891,14 @@ nav#navMenu a:hover {
       alert("Please fill in all fields before submitting.");
       return false;
     }
-    alert("Message sent! Thanks for contacting.");
-    return true;
+
+    // Allow form submission, and reset after short delay
+    setTimeout(() => {
+      document.getElementById("contactForm").reset();
+      alert("Message sent! Thanks for contacting.");
+    }, 1000); // Delay to ensure submission completes
+
+    return true; // continue submitting to Web3Forms
   }
 
   // Set current year in footer
