@@ -13,7 +13,54 @@
       --btn-bg: #0056b3;
       --btn-hover-bg: #004094;
     }
+.photo-container {
+  position: relative;
+  width: 200px; /* adjust as needed */
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
+.photo-container::before {
+  content: "";
+  position: absolute;
+  width: 220px; /* slightly bigger than image */
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  animation: spin 4s linear infinite;
+  z-index: -1;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid white; /* optional border */
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
     * {
       margin: 0;
       padding: 0;
@@ -917,3 +964,4 @@ nav#navMenu a:hover {
 
 </body>
 </html>
+
