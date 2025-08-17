@@ -15,19 +15,16 @@
     }
 .photo-container {
   position: relative;
-  width: 200px; /* adjust as needed */
-  height: 200px;
-  border-radius: 50%;
+  width: 220px;   /* container size */
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
-.photo-container::before {
-  content: "";
+.ring {
   position: absolute;
-  width: 220px; /* slightly bigger than image */
+  width: 220px;
   height: 220px;
   border-radius: 50%;
   background: conic-gradient(
@@ -41,25 +38,22 @@
     red
   );
   animation: spin 4s linear infinite;
-  z-index: -1;
+  z-index: 0;
 }
 
 .profile {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 5px solid white; /* optional border */
+  border: 5px solid white; /* keeps photo visible and neat */
   position: relative;
   z-index: 1;
+  background: #fff;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
     * {
       margin: 0;
@@ -964,4 +958,5 @@ nav#navMenu a:hover {
 
 </body>
 </html>
+
 
